@@ -5,13 +5,13 @@
 <mapper namespace="Pds">
 	<select id="pdslist" resultType="ITzy.OTT.dto.PdsDto">
 		select seq, id, title, content, filename, newfilename,
-			readcount, downcount, regidate
+			readcount, downcount, regdate
 		from pds;
 	</select>
 	
 	<insert id="uploadPds" parameterType="ITzy.OTT.dto.PdsDto">
 		insert into pds(id, title, content, filename, newfilename,
-			readcount, downcount, regidate)
+			readcount, downcount, regdate)
 		values (#{id}, #{title}, #{content}, #{filename}, #{newfilename}, 0, 0, now())
 	</insert>
 	
@@ -23,7 +23,7 @@
 	
 	<select id="getPds" parameterType="Integer" resultType="ITzy.OTT.dto.PdsDto">
 	select seq, id, title, content, filename, newfilename, 
-		readcount, downcount, regidate
+		readcount, downcount, regdate
 	from pds
 	where seq=#{seq}
 	</select>
@@ -57,7 +57,7 @@
 	
 	<update id="updatePds" parameterType="ITzy.OTT.dto.PdsDto">
 		update pds
-		set title=#{title}, content=#{content}, filename=#{filename}, newfilename=#{newfilename}, regidate=now()
+		set title=#{title}, content=#{content}, filename=#{filename}, newfilename=#{newfilename}, regdate=now()
 		where seq = #{seq}
 	</update>
 	

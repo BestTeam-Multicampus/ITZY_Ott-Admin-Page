@@ -13,14 +13,12 @@
 	</bean>
 
 <!-- 	download 	-->
-
+	
 	<bean id="DownloadView" class="ITzy.OTT.util.DownloadView"/>
-
-
 	<bean id="DownloadViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
-		<property name="order">
-			<value>0</value>
-		</property>
+    <property name="order">
+        <value>0</value>
+    </property>
 	</bean>
 
 

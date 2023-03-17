@@ -1,4 +1,4 @@
-package ITzy.OTT.controller;
+package ITzy.OTT.member;
 
 import java.util.ArrayList;
 import java.util.Date;

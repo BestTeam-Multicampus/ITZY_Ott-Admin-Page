@@ -139,6 +139,26 @@ if(bbsdelete != null && !bbsdelete.equals("")){
 	}	
 }
 
+String nanswer = (String)request.getAttribute("nanswer");
+if(nanswer != null && !nanswer.equals("")){
+	if(nanswer.equals("NBS_ANSWER_OK")){
+		%>
+		<script type="text/javascript">
+		alert("답글이 성공적으로 작성되었습니다");
+		location.href = "nbslist.do";
+		</script>
+		<%
+	}
+	else{
+		%>
+		<script type="text/javascript">
+		alert("답글을 다시 작성해 주십시오");
+		location.href = "nbslist.do";
+		</script>
+		<%
+	}	
+}
+
 String pdsupdate = (String)request.getAttribute("pdsupdate");
 if(pdsupdate != null && !pdsupdate.equals("")){
 	if(pdsupdate.equals("PDS_UPDATE_OK")){
