@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Q&A</title>
+<link rel="stylesheet" href="css/common.css"/>
 </head>
 <body>
 <p>건의사항 및 질문</p>

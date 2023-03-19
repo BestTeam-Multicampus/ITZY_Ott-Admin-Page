@@ -13,7 +13,7 @@
     String nsearch = (String)request.getAttribute("nsearch");
     %>
     
-    	<%
+    <%
 	MemberDto login = (MemberDto)session.getAttribute("login");
 	if(login == null){
 		%>
@@ -33,7 +33,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	
-<link rel="stylesheet" href="./css/common.css"/>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -42,24 +42,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="./jquery/jquery.twbsPagination.min.js"></script> -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script>
-
+<link rel="stylesheet" href="css/common.css"/>
 <style type="text/css">
+a{
+
+}
 .table th, .table td {
 	text-align: center;
 	vertical-align: middle!important;
 }
-body{
-display: flex, flex-direction: column;
-height: 100%;
+.center{
+	position: relative;
 }
-.content{
-flex: 1;
+header .login p a{
+	color:#333;
 }
 </style>
 
 </head>
 <body bgcolor="#e9e9e9">
-
+<div class="content">
 <h1>공고게시판</h1>
 <hr>
 <div class="content">
@@ -97,7 +99,7 @@ flex: 1;
 			<tr>
 				<th><%=i + 1 + (npageNumber * 10) %></th>			
 				<td><%=nbs.getId() %></td>	
-				<td style="text-align: center;">				
+				<td style="text-align: left; padding-left:10px;">				
 					<%=Utility.arrow(nbs.getDepth()) %>
 					<a href="nbsdetail.do?seq=<%=nbs.getSeq() %>">
 					<%=nbs.getTitle() %></a>
@@ -173,6 +175,7 @@ flex: 1;
 	<input type="hidden" name="seq">
 </form>
 
+</div>
 </div>
 <script type="text/javascript">
 

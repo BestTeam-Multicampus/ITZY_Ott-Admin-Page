@@ -6,11 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>main</title>
+<link rel="stylesheet" href="css/common.css"/>
 <style type="text/css">
 body {
-	flex: 1;
-	display: flex, flex-direction: column;
-height: 100%;
+
 }
 </style>
 </head>

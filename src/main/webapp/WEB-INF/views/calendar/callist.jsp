@@ -32,6 +32,7 @@ if (login == null) {
 <%
 List<CalDto> list = (List<CalDto>)request.getAttribute("list");
 %>
+
 <style>
 td{
 	text-align: center;
